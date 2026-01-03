@@ -1,102 +1,234 @@
-Sistema Inteligente de Prevenção a Cybercrimes com Python
-🔐 Título do Projeto
+# 🔐 CyberShieldPy
 
-CyberShieldPy – Sistema de Detecção e Prevenção de Atividades Maliciosas
+## Sistema Inteligente de Prevenção a Cybercrimes com Python, Dados e Governança
 
-🎯 Objetivo do Projeto
+---
 
-Desenvolver um sistema em Python capaz de identificar, analisar e prevenir potenciais cybercrimes, utilizando análise de dados, automação e técnicas básicas de Machine Learning, simulando cenários reais de segurança.
+## 📌 Visão Geral
 
-O projeto foca em:
+O **CyberShieldPy** é um projeto de portfólio desenvolvido em **Python** com foco na **prevenção de cybercrimes**, unindo **Análise de Dados, Machine Learning, Automação, Governança da Informação e LGPD**.
 
-Detecção de padrões suspeitos
-Prevenção proativa
-Geração de relatórios inteligentes
-Apoio à tomada de decisão em segurança
+O sistema simula um **pipeline real de segurança da informação**, desde a geração e coleta de logs até a **detecção de comportamentos anômalos**, atribuição de **score de risco**, registro de alertas e visualização em **dashboard gerencial**.
 
-🧠 Problema que o Projeto Resolve
+Mais do que detectar incidentes, o projeto foi pensado para demonstrar **maturidade técnica, visão preventiva e responsabilidade no uso de dados pessoais**.
 
-Empresas e instituições sofrem com:
-Tentativas de acesso não autorizado
-Ataques de força bruta
-Phishing
-Uso indevido de credenciais
-Tráfego anômalo em sistemas
+---
 
-O CyberShieldPy atua como uma camada preventiva, analisando logs e dados de comportamento para antecipar riscos.
+## 🎯 Objetivos do Projeto
 
-🛠️ Tecnologias Utilizadas
+* Detectar atividades suspeitas em logs de acesso
+* Identificar padrões anômalos de comportamento
+* Prevenir ataques como força bruta e acessos indevidos
+* Automatizar a análise de eventos de segurança
+* Gerar indicadores para apoio à tomada de decisão
+* Aplicar princípios de **Governança de Dados e LGPD** na prática
 
-Python 3
-Pandas – análise e tratamento de dados
-NumPy
-Scikit-learn – detecção de anomalias
-Matplotlib / Seaborn – visualização
-SQLite – armazenamento de eventos
-Regex – identificação de padrões suspeitos
-Streamlit (opcional) – dashboard interativo
-Git/GitHub – versionamento
+---
 
-🧩 Funcionalidades do Sistema
-1️⃣ Coleta de Dados (Simulada ou Real)
+## 🧠 Problema Abordado
 
-Logs de acesso (IP, data, hora, usuário)
-Tentativas de login
-Ações realizadas no sistema
-Origem geográfica (simulada)
+Organizações lidam com grandes volumes de logs e eventos de acesso, tornando inviável a análise manual e reativa. Isso pode resultar em:
 
-📁 Exemplo de entrada:
+* Ataques não detectados
+* Vazamento de dados
+* Falhas de conformidade
+* Baixa maturidade em governança de segurança
 
-timestamp, user, ip, action, status
-2026-01-02 10:32, admin, 192.168.0.10, login, failed
+O **CyberShieldPy** atua como uma **camada analítica e preventiva**, transformando dados brutos em **insights de risco acionáveis**.
 
-2️⃣ Análise de Comportamento
+---
 
-O sistema identifica:
-Muitas tentativas de login falhas
-Acesso fora do horário padrão
-IPs suspeitos
-Usuários com comportamento fora do padrão
+## 🛠️ Tecnologias Utilizadas
 
-📌 Exemplo:
+* **Python 3.12**
+* **Pandas / NumPy** – tratamento e análise de dados
+* **Scikit-learn** – detecção de anomalias
+* **SQLite** – persistência de alertas
+* **Streamlit** – dashboard interativo
+* **Matplotlib** – visualização
+* **Git / GitHub** – versionamento
 
-Usuário que sempre acessa de manhã → login às 3h da manhã
-20 tentativas falhas em 2 minutos
+---
 
-3️⃣ Detecção de Anomalias (Machine Learning)
+## ⚙️ Funcionalidades
 
-Utiliza algoritmos como:
-Isolation Forest
-Local Outlier Factor
-Para identificar:
-Padrões incomuns
-Possíveis ataques de força bruta
-Acessos automatizados (bots)
+### 📥 Geração e Coleta de Logs
 
-4️⃣ Mecanismo de Prevenção
+* Geração automatizada de logs simulando acessos reais
+* Campos monitorados:
 
-Quando um risco é identificado, o sistema pode:
-Marcar o evento como ALTO RISCO
-Simular bloqueio de IP
-Gerar alerta automático
-Registrar evidência para auditoria
+  * Usuário
+  * IP
+  * Data e hora
+  * Status de login
 
-5️⃣ Geração de Relatórios Inteligentes
+---
 
-Relatórios em:
-Excel
-PDF
-Dashboard Web
+### 📊 Análise de Comportamento
 
-Indicadores:
-Total de tentativas suspeitas
-Usuários mais visados
-Horários críticos
-IPs de maior risco
+* Identificação de padrões como:
 
-📊 Exemplo de Métricas Geradas
+  * Múltiplas falhas de login
+  * Acessos fora do horário padrão
+  * IPs com comportamento suspeito
 
-Taxa de falha de login por usuário
-Número de acessos por IP
-Score de risco por evento
-Ranking de ameaças
+---
+
+### 🤖 Detecção de Anomalias
+
+* Aplicação de **Isolation Forest**
+* Identificação de eventos fora do padrão histórico
+* Suporte à priorização de riscos
+
+---
+
+### 🎯 Score de Risco (0–100)
+
+Cada evento recebe um score baseado em:
+
+* Falha de autenticação
+* Horário do acesso
+* Classificação como anomalia
+
+Classificação final:
+
+* **BAIXO**
+* **MÉDIO**
+* **ALTO**
+
+---
+
+### 🚨 Prevenção e Alertas
+
+* Registro automático de eventos de alto risco
+* Persistência em banco SQLite
+* Suporte à auditoria e rastreabilidade
+
+---
+
+### 📊 Dashboard Gerencial
+
+* Indicadores de segurança em tempo real
+* Filtros por nível de risco
+* Ranking de IPs suspeitos
+* Visão executiva para tomada de decisão
+
+---
+
+## 🔐 LGPD & Governança de Dados
+
+### 📌 Dados Tratados
+
+| Dado             | Classificação    |
+| ---------------- | ---------------- |
+| Usuário          | Dado pessoal     |
+| IP               | Dado pessoal     |
+| Timestamp        | Dado pessoal     |
+| Status de acesso | Dado operacional |
+
+> O projeto **não utiliza dados sensíveis**, mas aplica a LGPD por envolver dados pessoais.
+
+---
+
+### ⚖️ Base Legal
+
+* **Legítimo Interesse (Art. 7º, IX – LGPD)**
+* Finalidade exclusiva: **segurança da informação**
+
+---
+
+### 🛡️ Princípios da LGPD Aplicados
+
+* Finalidade
+* Necessidade (minimização)
+* Segurança
+* Prevenção
+* Responsabilização
+
+---
+
+## 🗂️ Estrutura do Projeto
+
+```
+cybershieldpy/
+│
+├── data/
+│   ├── generate_logs.py
+│   └── logs.csv
+│
+├── analysis/
+│   ├── data_analysis.py
+│   └── anomaly_detection.py
+│
+├── prevention/
+│   └── alert_system.py
+│
+├── reports/
+│   └── generate_report.py
+│
+├── dashboard/
+│   └── app.py
+│
+├── database/
+│   └── events.db
+│
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## ▶️ Execução do Pipeline
+
+```bash
+python data/generate_logs.py
+python analysis/data_analysis.py
+python analysis/anomaly_detection.py
+python prevention/alert_system.py
+python reports/generate_report.py
+python -m streamlit run dashboard/app.py
+```
+
+---
+
+## 📈 Resultados Esperados
+
+* Detecção proativa de ameaças
+* Redução do tempo de resposta a incidentes
+* Melhoria na governança e auditoria
+* Apoio à conformidade com LGPD
+
+---
+
+## 🚀 Roadmap
+
+* Integração com Threat Intelligence
+* NLP para detecção de phishing
+* Logs em tempo real
+* Arquitetura em nuvem
+* Testes automatizados
+
+---
+
+## 💼 Valor para Portfólio
+
+Este projeto demonstra competências em:
+
+* Análise de Dados aplicada à segurança
+* Automação com Python
+* Machine Learning
+* Governança da Informação
+* LGPD na prática
+* Pensamento preventivo
+
+---
+
+## 👨‍💻 Autor
+
+**Flavio Rodrigues**
+Analista de Dados | Automação | Governança | Cybersecurity
+
+
+---
+
+📌 *Projeto desenvolvido para fins educacionais e portifólio
