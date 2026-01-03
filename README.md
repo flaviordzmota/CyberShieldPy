@@ -225,7 +225,7 @@ Este projeto demonstra competências em:
 
 ## 👨‍💻 Autor
 
-**Flavio Rodrigues**
+**Flavio Rodrigues:**
 Analista de Dados | Automação | Governança | Cybersecurity
 
 
