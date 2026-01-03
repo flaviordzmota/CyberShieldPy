@@ -1,0 +1,6 @@
+python data/generate_logs.py
+python analysis/data_analysis.py
+python analysis/anomaly_detection.py
+python prevention/alert_system.py
+python reports/generate_report.py
+python -m streamlit run dashboard/app.py
